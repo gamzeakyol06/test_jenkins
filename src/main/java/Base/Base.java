@@ -15,11 +15,11 @@ public class Base {
     public final static String MAIN_PAGE_URL = "https://www.google.com/";
 
     public void beforemethod() throws MalformedURLException {
-        System.setProperty("webdriver.chrome.driver","src//main//driver//chromedriver.exe");
-        //System.out.println(System.getProperty("webdriver.chrome.driver"));
+        System.setProperty("webdriver.chrome.driver","src\\main\\driver\\chromedriver.exe");
+        System.out.println(System.getProperty("webdriver.chrome.driver"));
 
 
-        ChromeOptions chromeOptions = new ChromeOptions();
+        /*ChromeOptions chromeOptions = new ChromeOptions();
         //initialize chromeOptions
         chromeOptions.setCapability("browserName", "chrome");
         //Define on which browser you want to execute your tests.
@@ -27,8 +27,7 @@ public class Base {
         //Define in which mode your tests will run.
         chromeOptions.addArguments("--headless");
         //Define the platform on which you will execute your tests
-        WebDriver driver = new RemoteWebDriver(new URL("http://172.28.1.43:8080"), chromeOptions);
-
+        WebDriver driver = new RemoteWebDriver(new URL("http://172.28.1.43:8080"), chromeOptions);*/
         /*chromeOptions.addArguments("--whitelist-ip *");
         chromeOptions.addArguments("--proxy-server='direct://'");
         chromeOptions.addArguments("--proxy-bypass-list=*");
@@ -43,7 +42,7 @@ public class Base {
         chromeOptions.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
         //test.eldorturkey.com.tr
         // test.eldorturkey.com.tr*/
-        //driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         System.out.println("hello git");
     }
