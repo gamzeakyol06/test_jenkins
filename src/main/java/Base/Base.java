@@ -26,6 +26,7 @@ public class Base {
         // test.eldorturkey.com.tr*/
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        System.out.println("hello git");
     }
     public void aftermethod(){
         driver.quit();

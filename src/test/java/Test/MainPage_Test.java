@@ -23,6 +23,7 @@ public class MainPage_Test extends Base {
         System.out.println("Application Status is "  + response.getStatusCode());
         if (response.getStatusCode() == 200) {
             System.out.println("Test is OK");
+            System.out.println("Test is OK");
         } else {
             System.out.println("Test is NOK");
             Assert.fail();

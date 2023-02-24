@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="test_github" />
-        <module name="test_githubjenkins" />
+        <module name="test_jenkins" />
         <module name="FullApplication" />
       </profile>
     </annotationProcessing>

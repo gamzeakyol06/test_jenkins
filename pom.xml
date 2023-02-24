@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.eldor.com.tr</groupId>
-    <artifactId>test_githubjenkins</artifactId>
+    <artifactId>test_jenkins</artifactId>
     <version>1.0-SNAPSHOT</version>
     <profiles>
         <profile>
@@ -21,6 +21,10 @@
                                     <property>
                                         <name>listeners</name>
                                         <value>org.testng.reporters.EmailableReporter</value>
+                                    </property>
+                                    <property>
+                                        <username>s</username>
+                                        <password>o</password>
                                     </property>
                                 </properties>
                             </configuration>
