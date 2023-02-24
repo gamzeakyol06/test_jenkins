@@ -15,7 +15,7 @@ public class Base {
     public final static String MAIN_PAGE_URL = "https://www.google.com/";
 
     public void beforemethod() throws MalformedURLException {
-        System.setProperty("webdriver.chrome.driver","src\\main\\driver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","/var/lib/jenkins/workspace/test_github/src/main/driver/chromedriver.exe");
         System.out.println(System.getProperty("webdriver.chrome.driver"));
 
 
@@ -50,3 +50,4 @@ public class Base {
         driver.quit();
     }
 }
+/var/lib/jenkins/workspace/test_github/src/main/driver/chromedriver.exe
