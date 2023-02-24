@@ -5,11 +5,14 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import java.net.MalformedURLException;
+
 import static io.restassured.RestAssured.given;
 
 public class MainPage_Test extends Base {
     @BeforeTest
-    public void BeforeMethod() {
+    public void BeforeMethod() throws MalformedURLException {
         super.beforemethod();
     }
     @Test
