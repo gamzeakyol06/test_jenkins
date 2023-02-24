@@ -50,4 +50,3 @@ public class Base {
         driver.quit();
     }
 }
-/var/lib/jenkins/workspace/test_github/src/main/driver/chromedriver.exe
