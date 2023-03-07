@@ -15,11 +15,8 @@ public class Base {
     public final static String MAIN_PAGE_URL = "https://www.google.com/";
 
     public void beforemethod() throws MalformedURLException {
-
-        System.setProperty("webdriver.chrome.driver","src/main/driver/chromedriver_win32/chromedriver");
+        System.setProperty("webdriver.chrome.driver","src/main/driver/chromedriver_linux64/chromedriver");
         System.out.println(System.getProperty("webdriver.chrome.driver"));
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless");
 
         /*ChromeOptions chromeOptions = new ChromeOptions();
         //initialize chromeOptions
@@ -45,7 +42,7 @@ public class Base {
         //test.eldorturkey.com.tr
         // test.eldorturkey.com.tr*/
 
-        driver = new ChromeDriver(chromeOptions);
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         System.out.println("hello git");
     }
