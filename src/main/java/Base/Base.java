@@ -12,11 +12,16 @@ import java.net.URL;
 public class Base {
     protected static WebDriver driver;
 
-    public final static String MAIN_PAGE_URL = "https://www.google.com/";
+    public final static String MAIN_PAGE_URL = "https://merchanttest.niso.dev/";
 
     public void beforemethod() throws MalformedURLException {
-        System.setProperty("webdriver.chrome.driver","src/main/driver/chromedriver_win32/chromedriver.exe");
-        System.out.println(System.getProperty("webdriver.chrome.driver"));
+        //System.setProperty("webdriver.chrome.driver","src/main/driver/chromedriver_win32/chromedriver.exe");
+        //System.out.println(System.getProperty("webdriver.chrome.driver"));
+
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("start-maximized");
+        driver = new RemoteWebDriver(new URL("http://46.101.220.229:4444"), chromeOptions);
+        System.out.println("***** Selenium Grid Chrome *****");
 
         /*ChromeOptions chromeOptions = new ChromeOptions();
         //initialize chromeOptions
@@ -42,7 +47,9 @@ public class Base {
         //test.eldorturkey.com.tr
         // test.eldorturkey.com.tr*/
 
-        driver = new ChromeDriver();
+       // driver = nw CehromeDriver();
+        //driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         System.out.println("hello git");
     }
