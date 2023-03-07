@@ -16,7 +16,7 @@ public class Base {
 
     public void beforemethod() throws MalformedURLException {
 
-        System.setProperty("webdriver.chrome.driver","src/main/driver/chromedriver_linux64/chromedriver");
+        System.setProperty("webdriver.chrome.driver","src/main/driver/chromedriver_win32/chromedriver");
         System.out.println(System.getProperty("webdriver.chrome.driver"));
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
