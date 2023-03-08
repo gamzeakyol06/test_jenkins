@@ -28,7 +28,7 @@ public class Base {
         //chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
 
-        driver = new RemoteWebDriver(new URL("http://46.101.220.229:4444/ui"), chromeOptions);
+        WebDriver driver = new RemoteWebDriver(new URL("http://46.101.220.229:4444/wd/hub"), chromeOptions);
 
         System.out.println("***** Selenium Grid Chrome *****");
 
