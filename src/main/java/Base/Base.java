@@ -25,7 +25,7 @@ public class Base {
         chromeOptions.setCapability("se:noVncPort",7900);
         chromeOptions.setCapability("se:vncEnabled",true);
         chromeOptions.addArguments("start-maximized");
-        chromeOptions.addArguments("--headless");
+        //chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
 
         driver = new RemoteWebDriver(new URL("http://46.101.220.229:4444"), chromeOptions);
