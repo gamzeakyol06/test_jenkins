@@ -19,11 +19,17 @@ public class Base {
         //System.out.println(System.getProperty("webdriver.chrome.driver"));
 
         ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setCapability("browserName","chrome");
+        chromeOptions.setCapability("browserVersion","110.0");
+        chromeOptions.setCapability("platformName","LINUX");
+        chromeOptions.setCapability("se:noVncPort",7900);
+        chromeOptions.setCapability("se:vncEnabled",true);
         chromeOptions.addArguments("start-maximized");
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
 
         driver = new RemoteWebDriver(new URL("http://46.101.220.229:4444/wd/hub/"), chromeOptions);
+
         System.out.println("***** Selenium Grid Chrome *****");
 
         /*ChromeOptions chromeOptions = new ChromeOptions();
