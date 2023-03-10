@@ -29,7 +29,7 @@ public class Base {
         chromeOptions.addArguments("--no-sandbox");
         Thread.sleep(5000);
 
-        driver = new RemoteWebDriver(new URL("http://46.101.220.229:4444/wd/hub"), chromeOptions);
+        driver = new RemoteWebDriver(new URL("SELENIUM_REMOTE_URL"), chromeOptions);
 
         System.out.println("***** Selenium Grid Chrome *****");
 
