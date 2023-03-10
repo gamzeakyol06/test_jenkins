@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 
 public class MainPage_Test extends Base {
     @BeforeTest
-    public void BeforeMethod() throws MalformedURLException {
+    public void BeforeMethod() throws MalformedURLException, InterruptedException {
         super.beforemethod();
     }
     @Test

@@ -14,7 +14,7 @@ public class Base {
 
     public final static String MAIN_PAGE_URL = "https://merchanttest.niso.dev/";
 
-    public void beforemethod() throws MalformedURLException {
+    public void beforemethod() throws MalformedURLException, InterruptedException {
         //System.setProperty("webdriver.chrome.driver","src/main/driver/chromedriver_win32/chromedriver.exe");
         //System.out.println(System.getProperty("webdriver.chrome.driver"));
 
@@ -27,8 +27,9 @@ public class Base {
         chromeOptions.addArguments("start-maximized");
         //chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
+        Thread.sleep(5000);
 
-        WebDriver driver = new RemoteWebDriver(new URL("http://46.101.220.229:4444/wd/hub"), chromeOptions);
+        driver = new RemoteWebDriver(new URL("http://46.101.220.229:4444/wd/hub"), chromeOptions);
 
         System.out.println("***** Selenium Grid Chrome *****");
 
