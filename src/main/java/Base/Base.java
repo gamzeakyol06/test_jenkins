@@ -13,14 +13,14 @@ public class Base {
     protected static WebDriver driver;
 
     public final static String MAIN_PAGE_URL = "https://merchanttest.niso.dev/";
-    private ChromeOptions ChromeOptions;
+    //private ChromeOptions ChromeOptions;
 
     public void beforemethod() throws MalformedURLException, InterruptedException {
 
         ChromeOptions chromeOptions = new ChromeOptions();
 
         chromeOptions.setCapability("browserName","chrome");
-        chromeOptions.setCapability("platformName","LINUX");
+        //chromeOptions.setCapability("platformName","LINUX");
         chromeOptions.addArguments("start-maximized");
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
