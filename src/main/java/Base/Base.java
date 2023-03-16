@@ -8,7 +8,7 @@ import java.net.MalformedURLException;
 public class Base {
     protected static WebDriver driver;
 
-    public final static String MAIN_PAGE_URL = "https://merchanttest.niso.dev/";
+    public final static String MAIN_PAGE_URL = "https://pamis-webdmin.niso.dev/";
 
     public void beforemethod() throws MalformedURLException, InterruptedException {
 
