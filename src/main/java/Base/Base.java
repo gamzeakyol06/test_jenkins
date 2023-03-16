@@ -13,14 +13,18 @@ public class Base {
     protected static WebDriver driver;
 
     public final static String MAIN_PAGE_URL = "https://merchanttest.niso.dev/";
+    private ChromeOptions ChromeOptions;
 
     public void beforemethod() throws MalformedURLException, InterruptedException {
-        driver = new ChromeDriver();
-        System.setProperty("webdriver.chrome.driver","/src/main/driver/chromedriver_linux64/chromedriver");
-        ///var/lib/jenkins/workspace/test_github/
+
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--remote-allow-origins=*");
+
+        driver = new ChromeDriver(chromeOptions);
+        System.setProperty("webdriver.chrome.driver","/src/main/driver/chromedriver_win32_x/chromedriver.exe");
         System.out.println(System.getProperty("webdriver.chrome.driver"));
 
-       ChromeOptions chromeOptions = new ChromeOptions();
+        /*ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setCapability("browserName","chrome");
         chromeOptions.setCapability("browserVersion","110.0");
         chromeOptions.setCapability("platformName","LINUX");
@@ -29,7 +33,7 @@ public class Base {
         chromeOptions.addArguments("start-maximized");
         //chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
-        Thread.sleep(5000);
+        Thread.sleep(5000);*/
 
         //driver = new RemoteWebDriver(new URL("http://46.101.220.229:4444/wd/hub"), chromeOptions);
         //System.out.println("***** Selenium Grid Chrome *****");
@@ -60,6 +64,8 @@ public class Base {
         //driver = new RemoteWebDriver(new URL("http://172.28.1.43:8080/wd/hub"),chromeOptions);
 
         //driver.manage().window().maximize();
+
+
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         System.out.println("hello git");
