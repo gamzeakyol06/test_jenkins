@@ -15,7 +15,7 @@ public class Base {
     public final static String MAIN_PAGE_URL = "https://merchanttest.niso.dev/";
 
     public void beforemethod() throws MalformedURLException, InterruptedException {
-        System.setProperty("webdriver.chrome.driver","chmod +x /var/lib/jenkins/workspace/test_github/src//main/driver/chromedriver_linux64/chromedriver"); ///var/lib/jenkins/workspace/test_github/
+        System.setProperty("webdriver.chrome.driver","chmod +x /src//main/driver/chromedriver_linux64/chromedriver"); ///var/lib/jenkins/workspace/test_github/
         System.out.println(System.getProperty("webdriver.chrome.driver"));
 
         ChromeOptions chromeOptions = new ChromeOptions();
