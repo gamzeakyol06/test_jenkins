@@ -55,7 +55,7 @@ public class Base {
         //test.eldorturkey.com.tr
         // test.eldorturkey.com.tr*/
 
-        driver = new RemoteWebDriver(new URL("http://172.28.1.43:8080"),chromeOptions);
+        driver = new RemoteWebDriver(new URL("http://172.28.1.43:8080/wd/hub"),chromeOptions);
         //WebDriver driver = new ChromeDriver();
         //driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
