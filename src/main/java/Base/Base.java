@@ -15,8 +15,8 @@ public class Base {
     public final static String MAIN_PAGE_URL = "https://merchanttest.niso.dev/";
 
     public void beforemethod() throws MalformedURLException, InterruptedException {
-        //System.setProperty("webdriver.chrome.driver","src/main/driver/chromedriver_win32/chromedriver.exe");
-        //System.out.println(System.getProperty("webdriver.chrome.driver"));
+        System.setProperty("webdriver.chrome.driver","src/main/driver/chromedriver.exe");
+        System.out.println(System.getProperty("webdriver.chrome.driver"));
 
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setCapability("browserName","chrome");
@@ -29,7 +29,7 @@ public class Base {
         chromeOptions.addArguments("--no-sandbox");
         Thread.sleep(5000);
 
-        driver = new RemoteWebDriver(new URL("http://46.101.220.229:4444/wd/hub"), chromeOptions);
+        //driver = new RemoteWebDriver(new URL("http://46.101.220.229:4444/wd/hub"), chromeOptions);
 
         System.out.println("***** Selenium Grid Chrome *****");
 
@@ -57,7 +57,7 @@ public class Base {
         //test.eldorturkey.com.tr
         // test.eldorturkey.com.tr*/
 
-       // driver = nw CehromeDriver();
+       driver = new ChromeDriver();
         //driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
