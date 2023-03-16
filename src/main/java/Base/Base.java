@@ -18,6 +18,12 @@ public class Base {
     public void beforemethod() throws MalformedURLException, InterruptedException {
 
         ChromeOptions chromeOptions = new ChromeOptions();
+
+        chromeOptions.setCapability("browserName","chrome");
+        chromeOptions.setCapability("platformName","LINUX");
+        chromeOptions.addArguments("start-maximized");
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--remote-allow-origins=*");
 
         driver = new ChromeDriver(chromeOptions);
