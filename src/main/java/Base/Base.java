@@ -15,10 +15,10 @@ public class Base {
     public final static String MAIN_PAGE_URL = "https://merchanttest.niso.dev/";
 
     public void beforemethod() throws MalformedURLException, InterruptedException {
-        System.setProperty("webdriver.chrome.driver","/src/main/driver/chromedriver_linux64/chromedriver"); ///var/lib/jenkins/workspace/test_github/
-        System.out.println(System.getProperty("webdriver.chrome.driver"));
+        //System.setProperty("webdriver.chrome.driver","/src/main/driver/chromedriver_linux64/chromedriver"); ///var/lib/jenkins/workspace/test_github/
+        //System.out.println(System.getProperty("webdriver.chrome.driver"));
 
-        ChromeOptions chromeOptions = new ChromeOptions();
+       ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setCapability("browserName","chrome");
         chromeOptions.setCapability("browserVersion","110.0");
         chromeOptions.setCapability("platformName","LINUX");
@@ -30,9 +30,7 @@ public class Base {
         Thread.sleep(5000);
 
         //driver = new RemoteWebDriver(new URL("http://46.101.220.229:4444/wd/hub"), chromeOptions);
-
         //System.out.println("***** Selenium Grid Chrome *****");
-
         /*ChromeOptions chromeOptions = new ChromeOptions();
         //initialize chromeOptions
         chromeOptions.setCapability("browserName", "chrome");
@@ -57,7 +55,8 @@ public class Base {
         //test.eldorturkey.com.tr
         // test.eldorturkey.com.tr*/
 
-        WebDriver driver = new ChromeDriver();
+        driver = new RemoteWebDriver(new URL("http://172.28.1.43:8080"),chromeOptions);
+        //WebDriver driver = new ChromeDriver();
         //driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
