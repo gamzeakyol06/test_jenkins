@@ -22,7 +22,7 @@ public class Base {
 
 
         driver = new ChromeDriver(chromeOptions);
-        System.setProperty("webdriver.chrome.driver","/src/main/driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","/src/main/driver/chromedriver");
         System.out.println(System.getProperty("webdriver.chrome.driver"));
 
         driver.manage().deleteAllCookies();
