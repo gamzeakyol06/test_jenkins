@@ -8,8 +8,7 @@ import java.net.MalformedURLException;
 public class Base {
     protected static WebDriver driver;
 
-    public final static String MAIN_PAGE_URL = "https://pamis-webdmin.niso.dev/";
-
+    public final static String MAIN_PAGE_URL = "https://lima.eldor.com.tr";
     public void beforemethod() throws MalformedURLException, InterruptedException {
 
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -19,7 +18,6 @@ public class Base {
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--remote-allow-origins=*");
-
 
         driver = new ChromeDriver(chromeOptions);
 

@@ -15,6 +15,7 @@ public class MainPage_Test extends Base {
     public void BeforeMethod() throws MalformedURLException, InterruptedException {
         super.beforemethod();
     }
+
     @Test
     public void Page_Test() throws InterruptedException {
         driver.get(MAIN_PAGE_URL);
